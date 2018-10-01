@@ -15,19 +15,19 @@
         <property name="connection.pool_size">1</property>
         
         <!-- SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
 
         <!-- Disable the second-level cache  -->
-        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="cache.provider.class">org.hibernate.cache.NoCacheProvider</property>
         
         <!-- Echo all executed SQL to stdout -->
-        <property name="show_sql">true</property>
+        <property name="hibernate.show_sql">true</property>
 
         <!-- Drop the existing tables and create new one -->
         <property name="hbm2ddl.auto">create</property>
  
         <!-- Mention here all the model classes along with their package name -->
- 		<mapping class="com.gontuseries.hibernate.Student_Info"/>
+ 		<mapping class="com.hibernate.StudentInfo"/>
  		
  		 
     </session-factory>
