@@ -1,8 +1,8 @@
-// Model class
-
 package com.hibernate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,21 +10,23 @@ import javax.persistence.Table;
 @Table(name="STUDENT_INFORMATION")
 public class StudentInfo {
 	
-	@Id
-	private int rollNo;
-	private String Name;
+	@Id @GeneratedValue
+	private int ROLLNO;
+	
+	@Column(name="FULL_NAME")
+	private String NAME;
 
 	public int getRollNo() {
-		return rollNo;
+		return ROLLNO;
 	}
-	public void setRollNo(int rollNo) {
-		this.rollNo = rollNo;
+	public void setRollNo(int ROLLNO) {
+		this.ROLLNO = ROLLNO;
 	}
 	public String getName() {
-		return Name;
+		return NAME;
 	}
-	public void setName(String name) {
-		Name = name;
+	public void setName(String NAME) {
+		this.NAME = NAME;
 	}
 
 
